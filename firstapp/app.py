@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
@@ -13,4 +13,4 @@ def about():
 
 @app.route("/index/")
 def index():
-    return app.send_static_file('index.html')
+    return render_template("index.html")
